@@ -1,78 +1,111 @@
-# NexTech 3D Store 🚀
+# 3D E-Commerce Platform
 
-A futuristic, interactive full-stack e-commerce application featuring 3D product visualization, a glassmorphism user interface, and secure user authentication.
+A premium, interactive full-stack 3D e-commerce web application built with React, Vite, React Three Fiber, and a Node.js/Express backend with MongoDB. 
 
-## ✨ Features
+This project features a stunning glassmorphic UI, dynamic 3D rendering of products, and a complete checkout and user authentication flow.
 
-*   **Interactive 3D Environments:** Utilizes `React Three Fiber` and `Three.js` for an immersive landing page with interactive planets and a 3D tech model.
-*   **3D Product Viewer:** Users can view, rotate, and interact with 3D product models on the product details page.
-*   **Modern UI/UX:** Built with a stunning Glassmorphism aesthetic, gradient text, and smooth animations powered by `Framer Motion`.
-*   **Complete Authentication:** Secure user registration and login using JWT (JSON Web Tokens) and bcrypt password hashing.
-*   **Dynamic Cart System:** Real-time shopping cart management using `Zustand` for global state.
-*   **Admin Capabilities:** Integrated modal to seamlessly add or delete products directly from the UI.
-*   **Responsive Design:** Fully optimized for both desktop and mobile experiences.
+## 🌟 Features
 
-## 🛠️ Tech Stack
+- **Immersive 3D Visuals:** Interactive procedural 3D tech products using React Three Fiber.
+- **Premium UI/UX:** Glassmorphic dark-mode design with smooth animations using Framer Motion.
+- **Full-Stack E-Commerce:** 
+  - Dynamic product listing and detailed product views.
+  - Complete shopping cart functionality.
+  - Secure user authentication (Login/Register).
+  - Admin controls for adding/deleting products.
+- **Backend:** Node.js server with Express and MongoDB (Mongoose).
+- **Responsive Design:** Fully responsive layout for all devices.
+
+## 🚀 Technologies Used
 
 **Frontend:**
-*   React (Vite)
-*   React Three Fiber / Drei / Three.js (3D Graphics)
-*   Zustand (State Management)
-*   Framer Motion (Animations)
-*   Lucide React (Icons)
-*   React Router (Navigation)
+- React (v19)
+- Vite
+- React Three Fiber / Drei (3D Rendering)
+- Framer Motion (Animations)
+- Zustand (State Management)
+- React Router DOM
+- Lucide React (Icons)
 
 **Backend:**
-*   Node.js & Express.js
-*   MongoDB & Mongoose
-*   JSON Web Tokens (JWT)
-*   Bcrypt.js
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JSON Web Tokens (JWT) & bcryptjs for Authentication
+- CORS & dotenv
 
-## ⚙️ Local Installation
+## 📁 Project Structure
 
-Follow these steps to run the project locally on your machine.
+```
+├── backend/               # Node.js/Express Server
+│   ├── middleware/        # Auth & validation middlewares
+│   ├── models/            # Mongoose schemas (Product, User)
+│   ├── routes/            # API endpoints
+│   ├── server.js          # Entry point for backend
+│   └── seed.js            # Database seeding script
+├── src/                   # React Frontend
+│   ├── components/        # UI & 3D Canvas components
+│   ├── pages/             # Route pages (Home, Product, Auth)
+│   ├── store/             # Zustand state management
+│   ├── App.jsx            # Main app component
+│   └── index.css          # Global styles & glassmorphism
+```
 
-**1. Clone the repository**
-\`\`\`bash
-git clone https://github.com/keyur2903/nextech-3d-store.git
-cd nextech-3d-store
-\`\`\`
+## 🛠️ Getting Started
 
-**2. Install Frontend Dependencies**
-\`\`\`bash
-# Assuming your frontend is in the root or a 'client' folder. Adjust path if necessary.
-npm install
-\`\`\`
+### Prerequisites
+- Node.js installed
+- MongoDB installed and running locally (or a MongoDB Atlas connection string)
 
-**3. Install Backend Dependencies**
-\`\`\`bash
-# Assuming your backend is in a 'server' or 'backend' folder. Adjust path if necessary.
-cd server
-npm install
-\`\`\`
+### Installation
 
-**4. Set up Environment Variables**
-Create a `.env` file in your backend/server directory and add the following:
-\`\`\`env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_super_secret_key
-\`\`\`
+1. **Clone the repository**
+   ```bash
+   git clone <your-repository-url>
+   cd project3
+   ```
 
-**5. Run the Application**
-You will need two terminal windows:
+2. **Setup Frontend**
+   ```bash
+   npm install
+   ```
 
-*Terminal 1 (Backend):*
-\`\`\`bash
-cd server
-npm run dev # or node server.js
-\`\`\`
+3. **Setup Backend**
+   ```bash
+   cd backend
+   npm install
+   ```
 
-*Terminal 2 (Frontend):*
-\`\`\`bash
-# In the frontend directory
+4. **Environment Variables**
+   Create a `.env` file in the `backend/` directory with the following variables:
+   ```env
+   PORT=5000
+   MONGODB_URI=mongodb://127.0.0.1:27017/ecommerce3d
+   JWT_SECRET=your_jwt_secret_key
+   ```
+
+### Running the Application
+
+You will need two separate terminal windows.
+
+**Terminal 1: Start Backend**
+```bash
+cd backend
+npm start
+```
+
+**Terminal 2: Start Frontend**
+```bash
+# In the root project directory
 npm run dev
-\`\`\`
+```
 
-## 🧠 Development Note
-This project was built to explore the integration of complex 3D web graphics within a standard MERN stack architecture, showcasing the ability to combine heavy frontend visual libraries with secure, data-driven backend logic.
+### Seeding the Database (Optional)
+To populate the database with initial products, run:
+```bash
+cd backend
+npm run seed
+```
+
+## 📄 License
+This project is licensed under the MIT License.

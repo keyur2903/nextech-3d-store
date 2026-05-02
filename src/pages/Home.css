@@ -1,0 +1,74 @@
+.home {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* Let canvas handle drag */
+}
+
+.hero-text {
+  max-width: 600px;
+  padding: 3rem;
+  pointer-events: auto; /* Re-enable clicks for text box and button */
+  border-radius: 24px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+}
+
+.products-section {
+  padding: 8rem 2rem;
+  position: relative;
+  z-index: 10;
+  background: var(--bg-primary); /* ensure it overlays canvas if scrolled past */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero-text {
+    padding: 2rem;
+  }
+}
